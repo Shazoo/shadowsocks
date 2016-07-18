@@ -31,6 +31,9 @@ import time
 #       as sweep() causes long pause
 
 
+# LRUCache是一个自带计时器的缓存container，寻址使用dict模式。每次调用sweep后，将把超时的key和value删除掉。
+# 在每个key被删除的时候，其回调函数都会被调用。调用参数是key的value。
+
 class LRUCache(collections.MutableMapping):
     """This class is not thread safe"""
 

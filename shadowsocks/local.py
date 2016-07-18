@@ -46,11 +46,11 @@ def main():
 
         dns_resolver = asyncdns.DNSResolver()
         tcp_server = tcprelay.TCPRelay(config, dns_resolver, True)
-        udp_server = udprelay.UDPRelay(config, dns_resolver, True)
+        #udp_server = udprelay.UDPRelay(config, dns_resolver, True)
         loop = eventloop.EventLoop()
         dns_resolver.add_to_loop(loop)
         tcp_server.add_to_loop(loop)
-        udp_server.add_to_loop(loop)
+        # udp_server.add_to_loop(loop)
 
         def handler(signum, _):
             logging.warn('received SIGQUIT, doing graceful shutting down..')

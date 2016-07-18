@@ -456,7 +456,7 @@ def test():
             # TODO: what can we assert?
             print(result, error)
             counter += 1
-            if counter == 9:
+            if counter == 8:
                 dns_resolver.close()
                 loop.stop()
         a_callback = callback
@@ -464,7 +464,6 @@ def test():
 
     assert(make_callback() != make_callback())
 
-    dns_resolver.resolve(b'google.com', make_callback())
     dns_resolver.resolve('google.com', make_callback())
     dns_resolver.resolve('example.com', make_callback())
     dns_resolver.resolve('ipv6.google.com', make_callback())
@@ -481,6 +480,7 @@ def test():
                          'ooooooooooooooooooooooooooooooooooooooooooooooooooo'
                          'ooooooooooooooooooooooooooooooooooooooooooooooooooo'
                          'long.hostname', make_callback())
+
 
     loop.run()
 
