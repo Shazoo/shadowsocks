@@ -1,0 +1,11 @@
+{
+	"server":"128.199.233.199",
+	"server_port":9675,
+	"local_address":"127.0.0.1",
+	"local_port":9676,
+	"password":"pascal",
+	"timeout":300,
+	"method":"aes-256-cfb",
+	"fast_open":false,
+	"workers":1
+}
